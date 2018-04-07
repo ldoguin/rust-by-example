@@ -4,6 +4,16 @@
 
 Learn Rust with examples (Live code editor included)
 
+## Deploy on Clever Cloud
+
+```bash
+clever create --type static-apache rustbyexample # Create a static app
+clever env set CC_PRE_BUILD_HOOK 'cargo install mdbook && /home/bas/.cargo/bin/mdbook build' # set a variable to build the static site
+clever deploy # deploy on Clever Cloud
+clever open
+```
+
+
 ## Using
 
 If you'd like to read Rust by Example, you can visit
